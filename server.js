@@ -13,7 +13,7 @@ app.use(
 );
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.resolve("frontend", "index.html"));
+  res.sendFile(path.resolve("dist", "index.html"));
 });
 
 // port 생성 서버 실행
