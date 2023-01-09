@@ -7,10 +7,7 @@ const path = require("path");
 // express 사용
 const app = express();
 
-app.use(
-  "/static",
-  express.static(path.resolve(__dirname, "frontend", "static"))
-);
+app.use("/dist", express.static(path.resolve(__dirname, "dist")));
 
 app.get("/*", (req, res) => {
   res.sendFile(path.resolve("dist", "index.html"));
