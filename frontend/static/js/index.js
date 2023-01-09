@@ -2,6 +2,7 @@ import Home from "./Home.js";
 import Posts from "./Posts.js";
 import Settings from "./Setting.js";
 import NotFound from "./NotFound.js";
+import "./index.css";
 
 function navigateTo(url) {
   history.pushState(null, null, url);
@@ -39,6 +40,8 @@ async function router() {
     const page = new match.route.view();
     document.querySelector("#root").innerHTML = await page.getHtml();
   }
+
+  console.log(history);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
